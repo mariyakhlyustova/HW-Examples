@@ -5,18 +5,18 @@
 
 Console.WriteLine("Введите N");
 int n = int.Parse(Console.ReadLine()!);
-int m = 1;
-Console.WriteLine(FromN1(m, n));
 
-string FromN1(int m, int n)
+Console.WriteLine(FromN1(n));
+
+string FromN1(int n)
 {
    
-    if (m == n)
+    if (n == 1)
     {
-        return m.ToString();
+        return $"{1}";
     }
     else
     {
-        return  FromN1(m + 1, n) + ", " + m.ToString();
+        return  $"{n}" + "," + FromN1(n - 1);
     }
 }
